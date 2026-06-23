@@ -1,0 +1,270 @@
+/* ===================================
+   RELAX PARK 5* — DESIGN TOKENS
+   Quiet Luxury Design System
+   =================================== */
+
+:root {
+  /* ───────── COLORS ───────── */
+
+  /* Primary - Earth Tones */
+  --color-charcoal: #1A1A1A;
+  --color-stone: #C4B5A5;
+  --color-beige: #E8E3DE;
+  --color-white: #FAFAFA;
+  --color-off-white: #F5F5F5;
+
+  /* Accent - Sparse Use */
+  --color-forest: #2D3A2F;
+  --color-gold: #B89F7A;
+  --color-gold-light: #D4C4A8;
+
+  /* Functional */
+  --color-success: #4A7C59;
+  --color-error: #8B3A3A;
+  --color-warning: #C49A6C;
+  --color-disabled: #9CA3AF;
+
+  /* Gradients */
+  --gradient-overlay-dark: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.6) 0%,
+    rgba(26, 26, 26, 0.2) 50%,
+    rgba(26, 26, 26, 0.6) 100%
+  );
+  --gradient-overlay-light: linear-gradient(
+    0deg,
+    rgba(26, 26, 26, 0.8) 0%,
+    rgba(26, 26, 26, 0) 100%
+  );
+
+  /* ───────── TYPOGRAPHY ───────── */
+
+  /* Font Families */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes - Desktop */
+  --text-display: 96px;
+  --text-h1: 72px;
+  --text-h2: 48px;
+  --text-h3: 32px;
+  --text-h4: 24px;
+  --text-body-lg: 18px;
+  --text-body: 16px;
+  --text-caption: 14px;
+  --text-overline: 12px;
+
+  /* Font Sizes - Mobile */
+  --text-display-mobile: 56px;
+  --text-h1-mobile: 42px;
+  --text-h2-mobile: 32px;
+  --text-h3-mobile: 24px;
+  --text-h4-mobile: 20px;
+
+  /* Line Heights */
+  --leading-tight: 0.9;
+  --leading-normal: 1.1;
+  --leading-relaxed: 1.5;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /* ───────── SPACING ───────── */
+
+  /* Base unit: 8px */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-8: 96px;
+  --space-10: 128px;
+  --space-12: 160px;
+  --space-16: 256px;
+  --space-20: 320px;
+  --space-24: 384px;
+
+  /* ───────── LAYOUT ───────── */
+
+  /* Container */
+  --container-max: 1440px;
+  --container-padding: 80px;
+  --container-padding-mobile: 20px;
+
+  /* Grid */
+  --grid-columns: 12;
+  --grid-gutter: 80px;
+  --grid-margin: 120px;
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+
+  /* ───────── BORDER RADIUS ───────── */
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* ───────── SHADOWS ───────── */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 48px 96px rgba(0, 0, 0, 0.2);
+
+  /* ───────── TRANSITIONS ───────── */
+
+  /* Duration */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-elegant: 1200ms;
+
+  /* Easing */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ───────── Z-INDEX ───────── */
+
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+
+  /* ───────── OPACITY ───────── */
+
+  --opacity-disabled: 0.5;
+  --opacity-muted: 0.7;
+  --opacity-hover: 0.9;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+/* Typography Utilities */
+.text-display {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-regular);
+}
+
+.text-h1 {
+  font-family: var(--font-serif);
+  font-size: var(--text-h1);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-regular);
+}
+
+.text-h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+  font-weight: var(--font-regular);
+}
+
+.text-h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-normal);
+  font-weight: var(--font-regular);
+}
+
+.text-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-normal);
+  font-weight: var(--font-regular);
+}
+
+.text-overline {
+  font-family: var(--font-sans);
+  font-size: var(--text-overline);
+  line-height: 1.3;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  font-weight: var(--font-medium);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .text-display {
+    font-size: var(--text-display-mobile);
+  }
+  .text-h1 {
+    font-size: var(--text-h1-mobile);
+  }
+  .text-h2 {
+    font-size: var(--text-h2-mobile);
+  }
+  .text-h3 {
+    font-size: var(--text-h3-mobile);
+  }
+}
+
+/* Animation Utilities */
+.transition-elegant {
+  transition: all var(--duration-elegant) var(--ease-default);
+}
+
+.transition-slow {
+  transition: all var(--duration-slow) var(--ease-default);
+}
+
+.transition-normal {
+  transition: all var(--duration-normal) var(--ease-default);
+}
+
+/* GPU Acceleration for animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
